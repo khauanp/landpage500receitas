@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>500 Receitas na Airfryer + 30 Doces (Bônus) — PedrosoOne</title>
+  <meta name="description" content="500 receitas na Airfryer + 30 doces de bônus. Prático, rápido e fácil. Acesso imediato por apenas R$ 3,00." />
+  <meta name="theme-color" content="#7a1f1f" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="500 Receitas na Airfryer + 30 Doces (Bônus)" />
+  <meta property="og:description" content="Receitas rápidas, fáceis e deliciosas. Acesso imediato por R$ 3,00." />
+  <meta property="og:type" content="website" />
+  <!-- Quando tiver imagem 1200x630, descomente -->
+  <!-- <meta property="og:image" content="https://seusite.com/og-airfryer.jpg" /> -->
+
+  <style>
+    :root{
+      /* Paleta culinária (alta legibilidade) */
+      --bg: #fff7ed;               /* creme (base) */
+      --ink: #1f2937;              /* carvão */
+      --muted: #475569;            /* texto secundário */
+      --card: #ffffff;             /* cartões */
+      --border: rgba(31,41,55,.12);
+      --shadow: 0 18px 50px rgba(31,41,55,.12);
+
+      --tomato: #b91c1c;           /* vermelho tomate */
+      --tomatoDark: #7f1d1d;
+      --amber: #f59e0b;            /* dourado / preço */
+      --herb: #15803d;             /* verde ervas */
+      --herbDark: #14532d;
+
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 520px at 10% -10%, rgba(245,158,11,.22), transparent 60%),
+        radial-gradient(820px 520px at 90% 0%, rgba(185,28,28,.18), transparent 60%),
+        radial-gradient(900px 520px at 50% 120%, rgba(21,128,61,.14), transparent 60%),
+        var(--bg);
+      line-height: 1.45;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 22px 18px 60px; }
+
+    /* Top bar */
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 12px; padding: 10px 0 18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight: 900; letter-spacing: .2px;
+    }
+    .logo{
+      width: 36px; height: 36px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--tomato), var(--amber));
+      box-shadow: 0 14px 30px rgba(185,28,28,.18);
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 9px 12px;
+      background: rgba(255,255,255,.75);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      box-shadow: 0 10px 30px rgba(31,41,55,.06);
+      white-space: nowrap;
+    }
+
+    /* Hero layout */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      align-items: start;
+    }
+    @media (max-width: 920px){
+      .hero{ grid-template-columns: 1fr; }
+    }
+
+    .panel{
+      background: rgba(255,255,255,.88);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-left{ padding: 26px 24px; }
+    .hero-right{ padding: 20px; }
+
+    /* Kicker tags */
+    .kicker{ display:flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(31,41,55,.10);
+      background: rgba(255,255,255,.85);
+      color: #334155;
+      font-size: 13px;
+      box-shadow: 0 10px 22px rgba(31,41,55,.05);
+    }
+    .tag strong{ color: #0f172a; }
+
+    /* Title + subtitle */
+    h1{
+      margin: 0 0 10px;
+      font-size: 40px;
+      line-height: 1.08;
+      letter-spacing: -0.7px;
+      color: #0f172a;
+    }
+    @media (max-width: 520px){ h1{ font-size: 32px; } }
+
+    .sub{
+      margin: 0 0 18px;
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 66ch;
+    }
+
+    /* Bullet grid */
+    .bullets{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 12px;
+      padding: 0;
+      margin: 16px 0 18px;
+      list-style: none;
+    }
+    @media (max-width: 560px){ .bullets{ grid-template-columns: 1fr; } }
+
+    .bullets li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding: 11px 12px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid rgba(31,41,55,.10);
+    }
+    .check{
+      width: 20px; height: 20px;
+      border-radius: 7px;
+      background: rgba(21,128,61,.12);
+      border: 1px solid rgba(21,128,61,.28);
+      display:grid; place-items:center;
+      flex: 0 0 auto;
+      margin-top: 1px;
+    }
+    .check svg{ width: 14px; height: 14px; fill: var(--herb); }
+
+    /* CTA buttons */
+    .cta-row{ display:flex; flex-wrap:wrap; gap: 12px; align-items:center; margin-top: 8px; }
+
+    .btn{
+      border: 0;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-weight: 900;
+      letter-spacing: .2px;
+      display:inline-flex; align-items:center; justify-content:center;
+      gap: 10px;
+      cursor: pointer;
+      user-select: none;
+      transition: transform .08s ease, filter .15s ease, box-shadow .15s ease;
+      white-space: nowrap;
+    }
+    .btn:active{ transform: translateY(1px); }
+
+    .btn-primary{
+      background: linear-gradient(135deg, var(--tomato), var(--tomatoDark));
+      color: #fff;
+      box-shadow: 0 18px 42px rgba(185,28,28,.22);
+      min-width: 260px;
+    }
+    .btn-primary:hover{ filter: brightness(1.03); }
+
+    .btn-secondary{
+      background: rgba(21,128,61,.10);
+      border: 1px solid rgba(21,128,61,.25);
+      color: var(--herbDark);
+    }
+    .btn-secondary:hover{ filter: brightness(1.02); }
+
+    .note{
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      display:flex; flex-wrap:wrap; gap: 10px;
+    }
+    .note span{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.9);
+      border: 1px solid rgba(31,41,55,.10);
+    }
+
+    /* Right pricing card */
+    .sticky{ position: sticky; top: 14px; }
+    @media (max-width: 920px){ .sticky{ position: static; } }
+
+    .priceBox{
+      background: linear-gradient(180deg, rgba(245,158,11,.18), rgba(255,255,255,.95));
+      border: 1px solid rgba(245,158,11,.28);
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .priceHead{
+      display:flex; align-items:flex-start; justify-content:space-between; gap: 10px;
+      margin-bottom: 10px;
+    }
+    .badge{
+      font-size: 12px;
+      font-weight: 900;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(185,28,28,.10);
+      border: 1px solid rgba(185,28,28,.22);
+      color: var(--tomatoDark);
+      white-space: nowrap;
+    }
+    .old{
+      font-size: 13px;
+      color: rgba(31,41,55,.55);
+      text-decoration: line-through;
+      font-weight: 800;
+    }
+    .now{
+      font-size: 34px;
+      font-weight: 950;
+      letter-spacing: -0.8px;
+      color: #0f172a;
+      margin-top: 2px;
+    }
+    .micro{
+      font-size: 13px;
+      color: rgba(31,41,55,.70);
+      font-weight: 700;
+    }
+
+    .mini{
+      margin-top: 12px;
+      background: #fff;
+      border: 1px solid rgba(31,41,55,.10);
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+    }
+    .mini b{ color: #0f172a; }
+    .mini ul{ margin: 10px 0 0; padding-left: 18px; color: rgba(31,41,55,.72); }
+    .mini li{ margin: 6px 0; }
+
+    .safe{
+      margin-top: 12px;
+      display:flex; gap: 10px; flex-wrap: wrap;
+    }
+    .safe .seal{
+      flex: 1 1 160px;
+      display:flex; align-items:flex-start; gap:10px;
+      background: rgba(21,128,61,.08);
+      border: 1px solid rgba(21,128,61,.18);
+      border-radius: 16px;
+      padding: 12px;
+      color: rgba(20,83,45,.92);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* Sections */
+    .section{ margin-top: 16px; padding: 20px 24px; }
+    .section h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      letter-spacing: -0.2px;
+      color: #0f172a;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+    @media (max-width: 920px){ .grid{ grid-template-columns: 1fr; } }
+
+    .card{
+      background: #fff;
+      border: 1px solid rgba(31,41,55,.10);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .card h3{ margin: 0 0 6px; font-size: 15px; color:#0f172a; }
+    .card p{ margin: 0; font-size: 14px; color: rgba(31,41,55,.72); }
+
+    /* FAQ */
+    .faq details{
+      background: #fff;
+      border: 1px solid rgba(31,41,55,.10);
+      border-radius: 16px;
+      padding: 12px 14px;
+      margin-top: 10px;
+    }
+    .faq summary{
+      cursor: pointer;
+      font-weight: 900;
+      color: #0f172a;
+      list-style:none;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq p{ margin: 10px 0 0; color: rgba(31,41,55,.72); font-size: 14px; }
+
+    .footer{
+      margin-top: 16px;
+      text-align:center;
+      color: rgba(31,41,55,.55);
+      font-size: 12px;
+      padding: 4px 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="#">
+        <span class="logo" aria-hidden="true"></span>
+        <span>PedrosoOne</span>
+      </a>
+
+      <div class="pill" title="Produto digital com entrega imediata">
+        ⚡ Acesso imediato • PDF no celular/PC
+      </div>
+    </div>
+
+    <div class="hero">
+      <!-- ESQUERDA -->
+      <section class="panel hero-left">
+        <div class="kicker">
+          <span class="tag">🍟 <strong>500 receitas</strong> na Airfryer</span>
+          <span class="tag">🍰 <strong>+30 doces</strong> de bônus</span>
+          <span class="tag">⏱️ Rápidas • Fáceis • Práticas</span>
+        </div>
+
+        <h1>Ideias prontas para a sua Airfryer <br/>todos os dias.</h1>
+
+        <p class="sub">
+          Chega de fazer sempre a mesma coisa. Aqui você encontra um PDF com receitas
+          <b>simples, objetivas e organizadas</b> para rotina corrida — e ainda leva <b>+30 doces</b> de bônus.
+        </p>
+
+        <ul class="bullets">
+          <li>
+            <span class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l-1.4 1.4 5.7 5.7L20.5 8.1l-1.4-1.4z"/></svg>
+            </span>
+            <span>Receitas para <b>café</b>, <b>almoço</b>, <b>jantar</b> e lanches</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l-1.4 1.4 5.7 5.7L20.5 8.1l-1.4-1.4z"/></svg>
+            </span>
+            <span>Modo de preparo <b>direto ao ponto</b> (sem enrolação)</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l-1.4 1.4 5.7 5.7L20.5 8.1l-1.4-1.4z"/></svg>
+            </span>
+            <span>Variedade: carnes, frango, acompanhamentos e mais</span>
+          </li>
+          <li>
+            <span class="check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9.2 16.6 4.9 12.3l-1.4 1.4 5.7 5.7L20.5 8.1l-1.4-1.4z"/></svg>
+            </span>
+            <span>Bônus: <b>30 doces</b> na Airfryer para completar o cardápio</span>
+          </li>
+        </ul>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://pay.kiwify.com.br/QvlKvhJ" target="_blank" rel="noopener">
+            Garantir por R$ 3,00 agora
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <a class="btn btn-secondary" href="#faq">
+            Tirar dúvidas
+          </a>
+        </div>
+
+        <div class="note">
+          <span>✅ Download imediato</span>
+          <span>✅ Compra segura</span>
+          <span>✅ Abre no celular</span>
+        </div>
+      </section>
+
+      <!-- DIREITA -->
+      <aside class="panel hero-right sticky" aria-label="Oferta e detalhes">
+        <div class="priceBox">
+          <div class="priceHead">
+            <div>
+              <div class="old">de R$ 29,90</div>
+              <div class="now">R$ 3,00</div>
+              <div class="micro">Oferta de entrada (alta conversão)</div>
+            </div>
+            <div class="badge">Promoção</div>
+          </div>
+
+          <div class="mini">
+            <b>Você recebe:</b>
+            <ul>
+              <li>PDF com <b>500 receitas</b> na Airfryer</li>
+              <li><b>+30 doces</b> (bônus incluso)</li>
+              <li>Acesso imediato após compra</li>
+            </ul>
+          </div>
+
+          <div class="mini">
+            <b>Ideal para:</b>
+            <ul>
+              <li>Quem quer <b>praticidade</b> no dia a dia</li>
+              <li>Quem quer <b>variedade</b> sem complicação</li>
+              <li>Quem quer receitas <b>fáceis</b> e rápidas</li>
+            </ul>
+          </div>
+
+          <a class="btn btn-primary" href="https://pay.kiwify.com.br/QvlKvhJ" target="_blank" rel="noopener" style="width:100%; margin-top: 12px;">
+            Comprar agora
+            <span aria-hidden="true">🧾</span>
+          </a>
+
+          <div class="safe">
+            <div class="seal">
+              🔒 <span>Checkout seguro<br/>e acesso imediato</span>
+            </div>
+            <div class="seal">
+              📱 <span>Funciona no celular<br/>sem precisar imprimir</span>
+            </div>
+          </div>
+
+          <div class="footer" style="padding-top: 10px;">
+            Ao clicar, você vai direto para o pagamento.
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- BENEFÍCIOS -->
+    <section class="panel section" style="margin-top:16px;">
+      <h2>O que muda quando você tem 500 receitas prontas</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Você para de repetir comida</h3>
+          <p>Cardápio variado sem depender de “ideia do dia”.</p>
+        </div>
+        <div class="card">
+          <h3>Você ganha tempo</h3>
+          <p>Receitas objetivas, pensadas para rotina real.</p>
+        </div>
+        <div class="card">
+          <h3>Você ainda recebe doces</h3>
+          <p>+30 sobremesas na Airfryer para fechar o combo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="panel section faq">
+      <h2>Dúvidas rápidas</h2>
+
+      <details>
+        <summary>Como eu recebo o material?</summary>
+        <p>Após a confirmação do pagamento, você recebe o acesso para baixar o PDF imediatamente (celular, tablet ou computador).</p>
+      </details>
+
+      <details>
+        <summary>É um ebook em PDF?</summary>
+        <p>Sim. Você baixa o arquivo e abre em qualquer aparelho.</p>
+      </details>
+
+      <details>
+        <summary>Serve para qualquer Airfryer?</summary>
+        <p>Sim. As receitas são gerais. Você só ajusta tempo/temperatura conforme o seu modelo.</p>
+      </details>
+
+      <details>
+        <summary>O bônus de doces vem junto?</summary>
+        <p>Sim. As +30 receitas de doces já estão incluídas no acesso.</p>
+      </details>
+
+      <div class="cta-row" style="margin-top: 14px;">
+        <a class="btn btn-primary" href="https://pay.kiwify.com.br/QvlKvhJ" target="_blank" rel="noopener">
+          Quero garantir por R$ 3,00
+          <span aria-hidden="true">→</span>
+        </a>
+        <!-- Troque pelo seu @ real -->
+        <a class="btn btn-secondary" href="https://instagram.com/pedrosoone" target="_blank" rel="noopener">
+          Ver no Instagram
+        </a>
+      </div>
+
+      <p class="footer">
+        © <span id="year"></span> PedrosoOne • Produto digital • Acesso imediato
+      </p>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mantém UTMs no checkout (se você divulgar com ?utm_source=...)
+    const params = window.location.search;
+    if (params && params.length > 1) {
+      document.querySelectorAll('a[href^="https://pay.kiwify.com.br/QvlKvhJ"]').forEach(a => {
+        const base = a.getAttribute("href");
+        a.setAttribute("href", base + (base.includes("?") ? "&" : "?") + params.slice(1));
+      });
+    }
+  </script>
+</body>
+</html>
